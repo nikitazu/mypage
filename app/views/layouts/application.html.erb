@@ -65,9 +65,7 @@
               <div class="panel-body">
                 <div class="list-group">
                   <%= link_to t('menu.my_page'), :root, :class => 'list-group-item' %>
-                  <a class="list-group-item">
-                    <%= t 'menu.my_works' %>
-                  </a>
+                  <%= link_to t('menu.my_works'), works_path, :class => 'list-group-item' %>
                   <%= link_to t('menu.my_stuff'), ideas_path, :class => 'list-group-item' %>
                 </div>
               </div>
