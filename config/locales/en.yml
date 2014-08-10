@@ -33,6 +33,8 @@ en:
     my_stuff: "My stuff"
   my_page:
     language: "Language"
+    greetings: "Hello, I'm nikitazu, a web-developer, and this is my page on the internet."
+    content: "This would be a place for myself to gather information that may be useful to my future clients."
   my_ideas:
     ideas_for_site: "Ideas for site"
     new_idea: "New idea"
