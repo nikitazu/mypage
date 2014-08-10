@@ -29,8 +29,11 @@ a.list-group-item.active:focus {
   border-color: $activeColor;
 }
 
-a, a:hover {
+a,
+a:visited,
+a:hover {
   color: $activeColor;
+  background-color: transparent;
 }
 
 .navbar-default {

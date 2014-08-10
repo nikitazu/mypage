@@ -2,31 +2,25 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @work.title %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <a {{bind-attr href='model.url'}} target="blank">
+      <%= @work.url %>
+    </a>
+  </div>
+  <div class="panel-body">
+    <p>
+      <%= @work.title %> <br/>
+      <%= @work.description %>
+    <p>
+    <p>
+      Work released on: <%= @work.released %>
+    </p>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Edit', edit_work_path(@work) %> |
+    <%= link_to 'Destroy', @work, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @work.description %>
-</p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @work.url %>
-</p>
-
-<p>
-  <strong>Released:</strong>
-  <%= @work.released %>
-</p>
-
-<p>
-  <strong>Is deleted:</strong>
-  <%= @work.is_deleted %>
-</p>
-
-<%= link_to 'Edit', edit_work_path(@work) %> |
-<%= link_to 'Destroy', @work, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', works_path %>
