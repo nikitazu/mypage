@@ -29,13 +29,17 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t 'my_page.language' %> (ru)<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= flag %>
+              <%= t 'my_page.language' %> (<%= I18n.locale %>)
+              <span class="caret"></span>
+            </a>
             <ul class="dropdown-menu flag-menu" role="menu">
               <li>
-                <a href="/ru"><span class="flag flag-ru"></span><span>Русский</span></a>
+                <a href="/ru"><%= flag :ru %><span>Русский</span></a>
               </li>
               <li>
-                <a href="/en"><span class="flag flag-gb"></span><span>English</span></a>
+                <a href="/en"><%= flag :en %></span><span>English</span></a>
               </li>
             </ul>
           </li>
