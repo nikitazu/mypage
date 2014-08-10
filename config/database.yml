@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: mypage_production
-  username: mypage
   password: <%= ENV['MYPAGE_DATABASE_PASSWORD'] %>
