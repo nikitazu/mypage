@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$activeColor: #ff7000;
+
+/* bootstrap overrides *
+ * ******************* */
+
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus {
+  background-color: $activeColor;
+  border-color: $activeColor;
+}
+
+a, a:hover {
+  color: $activeColor;
+}
+
+.navbar-default {
+  background-color: #333;
+  border: none;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: silver;
+}
+
+/* my overides *
+ * *********** */
+
+html, body {
+  margin: 25px 0;
+}
+
+#main {
+  padding-top: 10px;
+}
+
+.promo-image {
+  width: 100%;
+  height: 362px;
+  background-image: url(image_path('promo-orange.png'));
+  background-size: 1280px 362px;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.promo-text {
+  position: absolute;
+  right: 100px;
+  bottom: 30px;
+  color: $activeColor;
+  font-size: xx-large;
+  font-style: italic;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: black;
+  padding: 10px;
+  opacity: 0.7;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 15px 6px
+}
+
+.copynone {
+  color: silver;
+  text-align: center;
+}
+
+/* flags sprite *
+* ************ */
+
+.flag {
+  width: 16px;
+  height: 11px;
+  background:url(image_path('flags.png')) no-repeat;
+}
+.flag.flag-gb { background-position: -16px 0; }
+.flag.flag-ru { background-position: 0 -11px; }
+
+.flag-menu li a span {
+  padding-left: 10px;
+  display: inline-block;
+}
