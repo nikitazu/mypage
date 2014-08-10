@@ -9,11 +9,24 @@ module ApplicationHelper
   end
   
   def active_link_to(title, path, param={})
-    if param.has_key?(:class)
-      param[:class] += (current_page?(path) ? ' active' : '')
-    else
-      param[:class] = (current_page?(path) ? 'active' : '')
+    if is_link_active?(path)
+      if param.has_key?(:class)
+        param[:class] += ' active'
+      else
+        param[:class] = 'active'
+      end
     end
     link_to title, path, param
   end
+  
+  private
+    def is_link_active?(path)
+      return current_page?(path) ||
+        request.fullpath.starts_with?(path.to_s) ||
+        path == :root && is_link_root?
+    end
+  
+    def is_link_root?()
+      request.fullpath == "/?locale=#{I18n.locale}" || request.fullpath == "/#{I18n.locale}"
+    end
 end
