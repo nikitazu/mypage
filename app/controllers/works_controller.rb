@@ -10,7 +10,7 @@ class WorksController < ApplicationController
   # GET /works/1
   # GET /works/1.json
   def show
-    @works = Work.all
+    @works = Work.all # TODO: is that worth it? optimize?
   end
 
   # GET /works/new
@@ -20,6 +20,7 @@ class WorksController < ApplicationController
 
   # GET /works/1/edit
   def edit
+    @works = Work.all # TODO: is that worth it? optimize?
   end
 
   # POST /works

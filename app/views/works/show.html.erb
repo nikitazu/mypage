@@ -18,8 +18,8 @@
     </p>
   </div>
   <div class="panel-footer">
-    <%= link_to 'Edit', edit_work_path(@work) %> |
-    <%= link_to 'Destroy', @work, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to t('actions.edit'), edit_work_path(@work, anchor: 'works-list') %> |
+    <%= link_to t('actions.delete'), @work, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 </div>
 

@@ -40,6 +40,17 @@ en:
     new_idea: "New idea"
   my_works:
     new_work: "New work"
+  actions:
+    apply: "Apply"
+    edit: "Edit"
+    delete: "Delete"
+    cancel: "Cancel"
+  fields:
+    title: "Title"
+    description: "Description"
+    url: "URL"
+    work:
+      released: "Release date"
   user:
     username: "Username"
     password: "Password"

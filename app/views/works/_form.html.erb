@@ -10,28 +10,25 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  
+  <div class="input-group">
+    <%= f.label t('fields.title'), class: 'input-group-addon' %>
+    <%= f.text_field :title, class: 'form-control', placeholder: t('fields.title') %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+  <div class="input-group">
+    <%= f.label t('fields.description'), class: 'input-group-addon' %>
+    <%= f.text_field :description, class: 'form-control', placeholder: t('fields.description') %>
   </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
+  <div class="input-group">
+    <%= f.label t('fields.url'), class: 'input-group-addon' %>
+    <%= f.text_field :url, class: 'form-control', placeholder: t('fields.url') %>
   </div>
-  <div class="field">
-    <%= f.label :released %><br>
-    <%= f.date_select :released %>
+  <div class="input-group">
+    <%= f.label t('fields.work.released'), class: 'input-group-addon' %>
+    <%= f.date_select :released, class: 'form-control', placeholder: t('fields.work.released') %>
   </div>
-  <div class="field">
-    <%= f.label :is_deleted %><br>
-    <%= f.check_box :is_deleted %>
-  </div>
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('actions.apply'), class: 'btn btn-default' %>
   </div>
 <% end %>

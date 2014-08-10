@@ -19,6 +19,17 @@ ru:
     new_idea: "Новая идея"
   my_works:
     new_work: "Новая работа"
+  actions:
+    apply: "Применить"
+    edit: "Редактировать"
+    delete: "Удалить"
+    cancel: "Отменить"
+  fields:
+    title: "Название"
+    description: "Описание"
+    url: "Ссылка"
+    work:
+      released: "Дата сдачи"
   user:
     username: "Имя пользователя"
     password: "Пароль"
