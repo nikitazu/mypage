@@ -23,8 +23,9 @@ module ActiveLinkHelper
     end
   
     def is_link_active?(path)
+      link_without_anchor = path.to_s.split('#')[0]
       return current_page?(path) ||
-        request.fullpath.starts_with?(path.to_s) ||
+        request.fullpath.starts_with?(link_without_anchor) ||
         path == :root && is_link_root?
     end
   
