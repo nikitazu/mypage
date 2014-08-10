@@ -8,7 +8,7 @@
     
     <div class="list-group">
     <% @works.each do |work| %>
-      <%= link_to(work, :class => 'list-group-item') do %>
+      <%= active_rich_link_to(work, :class => 'list-group-item') do %>
         <h4 class="list-group-item-heading"><%= work.title %></h4>
         <p class="list-group-item-text"><%= work.description %></p>
       <% end %>
