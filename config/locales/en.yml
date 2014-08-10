@@ -38,6 +38,8 @@ en:
   my_ideas:
     ideas_for_site: "Ideas for site"
     new_idea: "New idea"
+  my_works:
+    new_work: "New work"
   user:
     username: "Username"
     password: "Password"
