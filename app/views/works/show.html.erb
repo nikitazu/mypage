@@ -4,17 +4,15 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <a {{bind-attr href='model.url'}} target="blank">
-      <%= @work.url %>
-    </a>
+    <%= link_to @work.url, @work.url, target: 'blank' %>
   </div>
   <div class="panel-body">
     <p>
       <%= @work.title %> <br/>
       <%= @work.description %>
+    </p>
     <p>
-    <p>
-      Work released on: <%= @work.released %>
+      <i><%= t 'fields.work.released' %>: <%= @work.released %></i>
     </p>
   </div>
   <div class="panel-footer">
