@@ -33,6 +33,9 @@ en:
     my_stuff: "My stuff"
   my_page:
     language: "Language"
+  my_ideas:
+    ideas_for_site: "Ideas for site"
+    new_idea: "New idea"
   user:
     username: "Username"
     password: "Password"

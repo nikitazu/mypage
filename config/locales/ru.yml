@@ -12,6 +12,9 @@ ru:
     my_stuff: "О разном"
   my_page:
     language: "Язык"
+  my_ideas:
+    ideas_for_site: "Идеи для сайта"
+    new_idea: "Новая идея"
   user:
     username: "Имя пользователя"
     password: "Пароль"
