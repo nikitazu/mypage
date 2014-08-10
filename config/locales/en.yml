@@ -20,4 +20,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  quotes:
+    a: "Algorythms written with Love"
+    b: "Warm sounding tube code"
+    c: "Modern technologies"
+  panels:
+    copynone: "All resources on this site, with exception to those that were licensed by a third party are subject to public domain."
+  menu:
+    main_menu: "Main menu"
+    my_page: "My page"
+    my_works: "My works"
+    my_stuff: "My stuff"
+  my_page:
+    language: "Language"
+  user:
+    username: "Username"
+    password: "Password"
+    login: "Sign in"
+
