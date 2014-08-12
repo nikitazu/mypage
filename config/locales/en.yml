@@ -49,6 +49,7 @@ en:
     title: "Title"
     description: "Description"
     url: "URL"
+    order: "Order"
     work:
       released: "Release date"
   user:

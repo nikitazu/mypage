@@ -1,6 +1,10 @@
-<h1>Editing idea</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @idea %> |
-<%= link_to 'Back', ideas_path %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t 'actions.edit' %> <%= @idea.title %></div>
+  <div class="panel-body">
+    <%= render 'form' %>
+  </div>
+  <div class="panel-footer">
+    <%= link_to t('actions.cancel'), @idea %>
+  </div>
+</div>

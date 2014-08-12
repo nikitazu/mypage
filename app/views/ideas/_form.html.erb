@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="input-group">
+    <%= f.label t('fields.title'), class: 'input-group-addon' %>
+    <%= f.text_field :title, class: 'form-control', placeholder: t('fields.title') %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+  <div class="input-group">
+    <%= f.label t('fields.description'), class: 'input-group-addon' %>
+    <%= f.text_field :description, class: 'form-control', placeholder: t('fields.description') %>
   </div>
-  <div class="field">
-    <%= f.label :order %><br>
-    <%= f.number_field :order %>
+  <div class="input-group">
+    <%= f.label t('fields.order'), class: 'input-group-addon' %>
+    <%= f.number_field :order, class: 'form-control', placeholder: t('fields.order') %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('actions.apply'), class: 'btn btn-default' %>
   </div>
 <% end %>
