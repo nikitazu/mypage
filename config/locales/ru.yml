@@ -28,7 +28,7 @@ ru:
     title: "Название"
     description: "Описание"
     url: "Ссылка"
-    order: "Вес"
+    order: "Порядковый номер"
     work:
       released: "Дата сдачи"
   user:
