@@ -6,14 +6,22 @@
   
   <div class="panel-body">
     
-    <div class="list-group">
+    <ul class="list-group">
     <% @ideas.each do |idea| %>
-      <%= link_to(edit_idea_path(idea), :class => 'list-group-item') do %>
-        <h4 class="list-group-item-heading"><%= idea.title %></h4>
-        <p class="list-group-item-text"><%= idea.description %></p>
-      <% end %>
+      <li class="list-group-item">
+        <%= link_to(edit_idea_path(idea), :style => 'display:block') do %>
+          <h4 class="list-group-item-heading"><%= idea.title %></h4>
+          <p class="list-group-item-text"><%= idea.description %></p>
+        <% end %>
+        <div style="position:absolute;right:10px;top:10%">
+          <%= form_tag move_idea_path idea do %>
+            <%= button_move :up %>
+            <%= button_move :down %>
+          <% end %>
+        </div>
+      </li>
     <% end %>
-    </div>
+    </ul>
     
   </div>
 </div>

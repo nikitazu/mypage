@@ -22,6 +22,9 @@ $activeColor: #ff7000;
 /* bootstrap overrides *
  * ******************* */
 
+.lisg-group-item > a.active,
+.lisg-group-item > a.active:hover,
+.lisg-group-item > a.active:focus,
 a.list-group-item.active,
 a.list-group-item.active:hover,
 a.list-group-item.active:focus {

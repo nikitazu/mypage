@@ -25,9 +25,14 @@ class IdeasController < ApplicationController
   # POST /ideas.json
   def create
     @idea = Idea.new(idea_params)
-
     respond_to do |format|
       if @idea.save
+        
+        Idea.all.each do |idea|
+          idea.order += 1
+          idea.save
+        end
+        
         format.html { redirect_to ideas_path, notice: 'Idea was successfully created.' }
         format.json { render :show, status: :created, location: @idea }
       else
@@ -50,11 +55,20 @@ class IdeasController < ApplicationController
       end
     end
   end
+  
+  def move
+    respond_to do |format|
+      set_idea
+      @idea.move params[:direction]
+      format.html { redirect_to ideas_path, notice: 'Idea was successfully updated.' }
+      format.json { render :show, status: :ok, location: @idea }
+    end
+  end
 
   # DELETE /ideas/1
   # DELETE /ideas/1.json
   def destroy
-    @idea.update is_deleted: true
+    @idea.delete_and_reorder
     respond_to do |format|
       format.html { redirect_to ideas_url, notice: 'Idea was successfully destroyed.' }
       format.json { head :no_content }

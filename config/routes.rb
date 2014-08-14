@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   
   scope "(:locale)", locale: /ru|en/ do
     resources :works
-    resources :ideas
+    resources :ideas do
+      member do
+        post 'move'
+      end
+    end
   end
   
   get '/:locale' => 'welcome#index'
