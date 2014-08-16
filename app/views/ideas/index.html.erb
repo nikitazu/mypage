@@ -1,14 +1,14 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <%= t 'my_ideas.ideas_for_site' %>
-    <% if user_signed_in? %>
+    <% if current_user_is_admin? %>
       <%= link_to t('my_ideas.new_idea'), new_idea_path, :class => 'pull-right' %>
     <% end %>
   </div>
   
   <div class="panel-body">
     
-    <% if user_signed_in? %>
+    <% if current_user_is_admin? %>
     <ul class="list-group">
     <% @ideas.each do |idea| %>
     

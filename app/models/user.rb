@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
          :validatable,
          :confirmable,
          :lockable
+
+  def is_admin?
+    self.email == 'nikitazu@gmail.com'
+  end
 end
