@@ -16,74 +16,10 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-$activeColor: #ff7000;
-$textColor: #333;
-
-/* bootstrap overrides *
- * ******************* */
-
-ul.list-group {
- list-style: none;
-}
-
-a.list-group-item.active,
-a.list-group-item.active:hover,
-a.list-group-item.active:focus {
-  background-color: $activeColor;
-  border-color: $activeColor;
-}
-
-a,
-a:link,
-a:visited,
-a:hover,
-a:focus {
-  color: $activeColor;
-  background-color: transparent;
-  
-  .list-group-item-heading { color: $activeColor; }
-  .list-group-item-text { color: $textColor; }
-}
-
-.navbar-default {
-  background-color: #333;
-  border: none;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: silver;
-}
-
-.input-group {
-  margin-bottom: 5px;
-}
-.input-group-addon {
-  min-width: 100px;
-}
-
-/* my overides *
- * *********** */
-
-.list-group-item-buttons {
-  position:absolute;
-  right:10px;
-  top:10%
-}
-
-/* my bootstrap additions *
- * ********************** */
-
-html, body {
-  margin: 25px 0;
-}
-
-#main {
-  padding-top: 10px;
-}
+@import "partials/reset";
+@import "partials/colors";
+@import "partials/flags_sprite";
+@import "partials/bootstrap_overrides";
 
 .form-control-from-label {
   font-weight: normal;
@@ -119,20 +55,4 @@ html, body {
 .copynone {
   color: silver;
   text-align: center;
-}
-
-/* flags sprite *
-* ************ */
-
-.flag {
-  width: 16px;
-  height: 11px;
-  background:url(image_path('flags.png')) no-repeat;
-  display: inline-block;
-}
-.flag.flag-en { background-position: -16px 0; }
-.flag.flag-ru { background-position: 0 -11px; }
-
-.flag-menu li a span {
-  padding-left: 10px;
 }
