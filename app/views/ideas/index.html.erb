@@ -8,18 +8,20 @@
     
     <ul class="list-group">
     <% @ideas.each do |idea| %>
-      <li class="list-group-item">
-        <%= link_to(edit_idea_path(idea), :style => 'display:block') do %>
+    
+      <li style="position:relative">
+        <%= link_to(edit_idea_path(idea), class: 'list-group-item') do %>
           <h4 class="list-group-item-heading"><%= idea.title %></h4>
           <p class="list-group-item-text"><%= idea.description %></p>
         <% end %>
-        <div style="position:absolute;right:10px;top:10%">
+        <div class="list-group-item-buttons">
           <%= form_tag move_idea_path idea do %>
             <%= button_move :up %>
             <%= button_move :down %>
           <% end %>
         </div>
       </li>
+      
     <% end %>
     </ul>
     

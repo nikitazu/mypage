@@ -22,9 +22,10 @@ $activeColor: #ff7000;
 /* bootstrap overrides *
  * ******************* */
 
-.lisg-group-item > a.active,
-.lisg-group-item > a.active:hover,
-.lisg-group-item > a.active:focus,
+ul.list-group {
+ list-style: none;
+}
+
 a.list-group-item.active,
 a.list-group-item.active:hover,
 a.list-group-item.active:focus {
@@ -60,6 +61,15 @@ a:hover {
 
 /* my overides *
  * *********** */
+
+.list-group-item-buttons {
+  position:absolute;
+  right:10px;
+  top:10%
+}
+
+/* my bootstrap additions *
+ * ********************** */
 
 html, body {
   margin: 25px 0;
