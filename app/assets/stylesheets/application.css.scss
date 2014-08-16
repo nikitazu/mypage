@@ -35,7 +35,10 @@ a.list-group-item.active:focus {
 
 a,
 a:visited,
-a:hover {
+a:hover,
+a .list-group-item-text,
+a:visited .list-group-item-text,
+a:hover .list-group-item-text {
   color: $activeColor;
   background-color: transparent;
 }
