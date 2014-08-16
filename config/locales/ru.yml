@@ -25,6 +25,7 @@ ru:
     edit: "Редактировать"
     delete: "Удалить"
     cancel: "Отменить"
+    dismiss: "Убрать"
   fields:
     title: "Название"
     description: "Описание"

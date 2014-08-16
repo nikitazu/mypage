@@ -46,6 +46,7 @@ en:
     edit: "Edit"
     delete: "Delete"
     cancel: "Cancel"
+    dismiss: "Dismiss"
   fields:
     title: "Title"
     description: "Description"
