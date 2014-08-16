@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Mailer
-  config.action_mailer.default_url_options = { host: 'mypage.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'nikitazu.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
