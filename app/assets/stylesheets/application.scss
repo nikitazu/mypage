@@ -18,6 +18,7 @@
 @import "bootstrap";
 
 $activeColor: #ff7000;
+$textColor: #333;
 
 /* bootstrap overrides *
  * ******************* */
@@ -34,13 +35,15 @@ a.list-group-item.active:focus {
 }
 
 a,
+a:link,
 a:visited,
 a:hover,
-a .list-group-item-text,
-a:visited .list-group-item-text,
-a:hover .list-group-item-text {
+a:focus {
   color: $activeColor;
   background-color: transparent;
+  
+  .list-group-item-heading { color: $activeColor; }
+  .list-group-item-text { color: $textColor; }
 }
 
 .navbar-default {
