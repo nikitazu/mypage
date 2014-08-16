@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t 'user.login' %>
+  </div>
+  <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+  
+      <div class="input-group">
+        <%= f.label t('fields.email'), class: 'input-group-addon' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: t('fields.email') %>
+      </div>
+      <div class="input-group">
+        <%= f.label t('user.password'), class: 'input-group-addon' %>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: t('user.password') %>
+      </div>
+      
+      <% if devise_mapping.rememberable? %>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <%= f.check_box :remember_me %>
+        </span>
+        <%= f.label t('user.remember_me'), class: 'form-control form-control-from-label' %>
+      </div>
+      <% end %>
+      
+      <div class="actions">
+        <%= f.submit t('user.login'), class: 'btn btn-default' %>
+      </div>
+
+    <% end %>
+  </div>
+  <div class="panel-footer">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
+
+

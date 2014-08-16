@@ -26,6 +26,7 @@ en:
     c: "Modern technologies"
   panels:
     copynone: "All resources on this site, with exception to those that were licensed by a third party are subject to public domain."
+    or: "or"
   menu:
     main_menu: "Main menu"
     my_page: "My page"
@@ -50,12 +51,20 @@ en:
     description: "Description"
     url: "URL"
     order: "Order"
+    email: "Email"
     work:
       released: "Release date"
   user:
     username: "Username"
     password: "Password"
+    password_confirmation: "Password confirmation"
     login: "Sign in"
+    logout: "Sign out"
+    register: "Register"
+    remember_me: "Remember me"
+    forgot_your_password: "Forgot your password? (click here)"
+    did_not_recieved_confirmation: "Didn't receive confirmation instructions? (click here)"
+    did_not_recieved_unlock: "Didn't receive unlock instructions? (click here)"
 
   date:
     abbr_day_names:
