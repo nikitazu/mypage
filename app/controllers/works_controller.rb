@@ -1,5 +1,6 @@
 class WorksController < ApplicationController
   before_action :set_work, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, :except => [:show, :index]
 
   # GET /works
   # GET /works.json

@@ -13,10 +13,13 @@
       <i><%= t 'fields.work.released' %>: <%= @work.released %></i>
     </p>
   </div>
+  
+  <% if user_signed_in? %>
   <div class="panel-footer">
     <%= link_to t('actions.edit'), edit_work_path(@work, anchor: 'works-list') %> |
     <%= link_to t('actions.delete'), @work, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
+  <% end %>
 </div>
 
 
